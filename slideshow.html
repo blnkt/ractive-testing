@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang='en-GB'>
+<head>
+  <meta charset='utf-8'>
+  <script src='http://cdn.ractivejs.org/latest/ractive.js'></script>
+  <script src='lib/ractive-events-tap.js'></script>
+  <title>Ractive test</title>
+</head>
+<body>
+  <h1>Ractive test</h1>
+
+  <div id='container'>
+
+  </div>
+
+  <script id='template' type='text/ractive'>
+    <div class='slideshow'>
+      <div class='main'>
+        <a class='prev'><span>&laquo;</span></a>
+        <div class='main-image'
+             style='background-image: url();'>
+        </div>
+        <a class='next'><span>&raquo;</span></a>
+      </div>
+
+      <div class='caption'>
+        <p></p>
+    </div>
+  </script>
+
+<script>
+var ractive = new Ractive({
+  el: 'container',
+  template: 'template',
+  data: {
+    // placeholder image data
+    image: {
+      src: '/gifs/problem.gif',
+      caption: 'Trying to work out a problem after the 5th hour'
+    }
+  }
+});
+</script
